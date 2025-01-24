@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import video from "../../../../public/video/loginimg.mp4";
 import UseAuth from "../../Hook/UseAuth";
 import Swal from "sweetalert2";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { Loginuser, Loginwithgoogle } = UseAuth();
+  const naviget = useNavigate();
   const loginuser = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -20,11 +21,25 @@ const Login = () => {
           icon: "success",
           draggable: true,
         });
+        naviget("/");
       })
       .catch((err) => console.log(err.message));
   };
+
   const loginwithgoogle = () => {
-    Loginwithgoogle();
+    Loginwithgoogle()
+      .then((result) => {
+        Swal.fire({
+          title: "Google login Successfully",
+          icon: "success",
+          draggable: true,
+        });
+        console.log(result);
+        naviget("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
   return (
     <div className="relative w-full h-screen">

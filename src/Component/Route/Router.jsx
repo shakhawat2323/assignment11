@@ -4,6 +4,9 @@ import Errore from "../Error/Errore";
 import Home from "../Home/Home";
 import Register from "../FIrbase/AuthProvider/Register";
 import Login from "../FIrbase/AuthProvider/Login";
+import Addartifact from "../Pages/Addartifact";
+import Allartifact from "../Pages/Allartifact";
+import Contactus from "../Pages/Contactus";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +25,18 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/addartifact",
+        element: <Addartifact></Addartifact>,
+      },
+      {
+        path: "/allartifact",
+        element: <Allartifact></Allartifact>,
+      },
+      {
+        path: "/contactus",
+        element: <Contactus></Contactus>,
       },
     ],
   },

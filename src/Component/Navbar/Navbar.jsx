@@ -18,13 +18,13 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/">All Artifact</NavLink>
+        <NavLink to="/allartifact">All Artifact</NavLink>
       </li>
       <li>
-        <NavLink to="/">Add Artifacts</NavLink>
+        <NavLink to="/addartifact">Add Artifact</NavLink>
       </li>
       <li>
-        <NavLink to="/">Contact Us</NavLink>
+        <NavLink to="/contactus">Contact Us</NavLink>
       </li>
     </>
   );
@@ -84,7 +84,7 @@ const Navbar = () => {
               >
                 <div className="w-10 rounded-full">
                   {user?.email ? (
-                    <img src={user.photoURL} alt="User Avatar" />
+                    <img src={user.photoURL} alt="K" />
                   ) : (
                     <FaUserAlt />
                   )}

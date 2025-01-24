@@ -42,7 +42,19 @@ const Register = () => {
   };
 
   const loginwithgoogle = () => {
-    Loginwithgoogle();
+    Loginwithgoogle()
+      .then((result) => {
+        Swal.fire({
+          title: "Google login Successfully",
+          icon: "success",
+          draggable: true,
+        });
+        console.log(result);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
   return (
     <div className="relative w-full h-screen">
