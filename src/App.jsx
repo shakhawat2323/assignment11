@@ -7,11 +7,7 @@ import Navbar from "./Component/Navbar/Navbar";
 function App() {
   const [count, setCount] = useState(0);
 
-  return (
-    <>
-      <Navbar></Navbar>
-    </>
-  );
+  return <></>;
 }
 
 export default App;
