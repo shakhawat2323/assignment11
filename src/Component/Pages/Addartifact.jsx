@@ -1,49 +1,65 @@
-import React from "react";
+import axios from "axios";
+import UseAuth from "../Hook/UseAuth";
+import "./page.css";
 
 const Addartifact = () => {
-  const submitdata = (e) => {
+  const { user } = UseAuth();
+  console.log(user);
+
+  const submitdata = async (e) => {
     e.preventDefault();
+    const useremail = user?.email;
+    // const formData = new FormData(e.target);
+    // const initialData = Object.fromEntries(formData.entries());
+    // const users = initialData;
     const form = e.target;
+    const artifactname = form.artifactname.value;
+    const artifactimg = form.artifactimg.value;
+    const artifacttype = form.artifacttype.value;
+    const createdat = form.createdat.value;
+    const discoverd = form.discoverd.value;
+    const discoveredby = form.discoveredby.value;
+    const historicalcontext = form.historicalcontext.value;
     const name = form.name.value;
-    const email = form.email.value;
-    const user = { name, email };
-    console.log(user);
+    const presentlocation = form.presentlocation.value;
+    const userss = {
+      artifactname,
+      artifactimg,
+      artifacttype,
+      createdat,
+      discoverd,
+      discoveredby,
+      historicalcontext,
+      name,
+      presentlocation,
+      useremail,
+    };
+
+    axios
+      .post(`${import.meta.env.VITE_SOME_KEY}/artifact`, userss)
+      .then((resul) => {
+        console.log(resul.data);
+      });
+
+    // fetch(`http://localhost:5000/artifact`, {
+    //   method: "POST",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(userss),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => console.log(data));
   };
   return (
-    <div className="w-11/12 mx-auto">
-      {/* <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <div className="card-body">
-              <fieldset onSubmit={submitdata} className="fieldset">
-                <label className="fieldset-label">Email</label>
-                <input
-                  name="name"
-                  type="email"
-                  className="input"
-                  placeholder="Email"
-                />
-                <label className="fieldset-label">Password</label>
-                <input
-                  type="password"
-                  name="email"
-                  className="input"
-                  placeholder="Password"
-                />
-
-                <button className="btn btn-neutral mt-4">Login</button>
-              </fieldset>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <div className="hero bg-base-200 min-h-screen">
+    <div>
+      <div className="hero bg-[url('/img/bglogo.jpg')] min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card bg-base-100  w-[400px] shrink-0 shadow-2xl">
             <h1 className="text-3xl text-center font-bold mt-3">
               ADD to new Artifact
             </h1>
-            <form className="card-body">
+            <form onSubmit={submitdata} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Artifact Name</span>
@@ -73,7 +89,10 @@ const Addartifact = () => {
                 <label className="label">
                   <span className="label-text">Artifact Type</span>
                 </label>
-                <select className="select select-accent w-full max-w-xs">
+                <select
+                  name="artifacttype"
+                  className="select select-accent w-full max-w-xs"
+                >
                   <option disabled selected>
                     Artifact Type
                   </option>
@@ -89,6 +108,7 @@ const Addartifact = () => {
                 </label>
                 <input
                   type="text"
+                  name="historicalcontext"
                   placeholder="Historical Context "
                   className="input input-bordered"
                   required
@@ -100,6 +120,7 @@ const Addartifact = () => {
                 </label>
                 <input
                   type="text"
+                  name="createdat"
                   placeholder="Created At"
                   className="input input-bordered"
                   required
@@ -111,6 +132,7 @@ const Addartifact = () => {
                 </label>
                 <input
                   type="text"
+                  name="discoverd"
                   placeholder="Discovered At"
                   className="input input-bordered"
                   required
@@ -122,7 +144,22 @@ const Addartifact = () => {
                 </label>
                 <input
                   type="text"
+                  name="discoveredby"
                   placeholder="Discovered By"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Full name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Full name"
+                  value={user?.displayName}
+                  readOnly
+                  name="name"
                   className="input input-bordered"
                   required
                 />
@@ -134,6 +171,7 @@ const Addartifact = () => {
                 </label>
                 <input
                   type="text"
+                  name="presentlocation"
                   placeholder="Present Location"
                   className="input input-bordered"
                   required
@@ -141,7 +179,7 @@ const Addartifact = () => {
               </div>
 
               <div className="form-control mt-6">
-                <button className="btn btn-primary text-center">
+                <button className="btn addbtn mx-auto block ">
                   Add Artifacts{" "}
                 </button>
               </div>

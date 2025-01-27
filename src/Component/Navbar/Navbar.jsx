@@ -84,7 +84,7 @@ const Navbar = () => {
               >
                 <div className="w-10 rounded-full">
                   {user?.email ? (
-                    <img src={user.photoURL} alt="K" />
+                    <img src={user?.photoURL} alt="photos" />
                   ) : (
                     <FaUserAlt />
                   )}
