@@ -92,19 +92,31 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm  dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-60 p-2 shadow"
               >
                 <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
+                  <NavLink
+                    to="/mypostartifact"
+                    className=" text-xl block mx-auto font-bold"
+                  >
+                    My Post Artifact
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/login">Login</NavLink>
+                  <NavLink
+                    className=" text-xl block mx-auto font-bold"
+                    to="/login"
+                  >
+                    Login
+                  </NavLink>
                 </li>
                 <li>
-                  <button onClick={logoutbtn}>Logout</button>
+                  <button
+                    className=" text-xl block mx-auto font-bold"
+                    onClick={logoutbtn}
+                  >
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>

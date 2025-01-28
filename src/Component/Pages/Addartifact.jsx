@@ -1,10 +1,12 @@
 import axios from "axios";
 import UseAuth from "../Hook/UseAuth";
 import "./page.css";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Addartifact = () => {
   const { user } = UseAuth();
-  console.log(user);
+  const naviget = useNavigate();
 
   const submitdata = async (e) => {
     e.preventDefault();
@@ -33,12 +35,21 @@ const Addartifact = () => {
       name,
       presentlocation,
       useremail,
+      likeCount: 0,
     };
 
     axios
       .post(`${import.meta.env.VITE_SOME_KEY}/artifact`, userss)
       .then((resul) => {
         console.log(resul.data);
+
+        Swal.fire({
+          title: "Successfuly Artifacts added",
+          icon: "success",
+          draggable: true,
+        });
+        form.reset();
+        naviget("/mypostartifact");
       });
 
     // fetch(`http://localhost:5000/artifact`, {
@@ -51,6 +62,9 @@ const Addartifact = () => {
     //   .then((res) => res.json())
     //   .then((data) => console.log(data));
   };
+
+  const data = new Date();
+
   return (
     <div>
       <div className="hero bg-[url('/img/bglogo.jpg')] min-h-screen">

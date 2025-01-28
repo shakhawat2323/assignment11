@@ -7,6 +7,8 @@ import Login from "../FIrbase/AuthProvider/Login";
 import Addartifact from "../Pages/Addartifact";
 import Allartifact from "../Pages/Allartifact";
 import Contactus from "../Pages/Contactus";
+import Mypostartifact from "../Pages/Mypostartifact";
+import Mypostupdate from "../Pages/Mypostupdate";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
       {
         path: "/allartifact",
         element: <Allartifact></Allartifact>,
+      },
+      {
+        path: "/mypostartifact",
+        element: <Mypostartifact></Mypostartifact>,
+      },
+      {
+        path: "/mypostupdate/:id",
+        element: <Mypostupdate></Mypostupdate>,
       },
       {
         path: "/contactus",
