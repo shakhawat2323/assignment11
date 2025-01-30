@@ -87,8 +87,8 @@ const Mypostartifact = () => {
             </thead>
             <tbody>
               {/* row 1 */}
-              {artifact.map((artifact) => (
-                <tr>
+              {artifact.map((artifact, index) => (
+                <tr key={index}>
                   <td>
                     <div className="flex items-center gap-3">
                       <div className="avatar">

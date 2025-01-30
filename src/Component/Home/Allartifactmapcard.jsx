@@ -1,7 +1,9 @@
 import { FcLike } from "react-icons/fc";
 import "./Artifact.css";
+import { NavLink } from "react-router-dom";
 const Allartifactmapcard = ({ cards }) => {
-  const { artifactname, artifactimg, historicalcontext, likeCount } = cards;
+  const { artifactname, artifactimg, historicalcontext, likeCount, _id } =
+    cards;
   return (
     <div>
       <div className="card   border-4  shadow-xl">
@@ -22,7 +24,12 @@ const Allartifactmapcard = ({ cards }) => {
               </div>
               <div className="text-xl font-bold"> {likeCount} </div>
             </div>
-            <button className="text-xl btns  font-bold">View Details</button>
+            <NavLink
+              to={`/detelescard/${_id}`}
+              className="text-xl btns  font-bold"
+            >
+              View Details
+            </NavLink>
           </div>
         </div>
       </div>

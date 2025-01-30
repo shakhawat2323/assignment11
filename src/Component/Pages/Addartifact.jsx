@@ -11,9 +11,7 @@ const Addartifact = () => {
   const submitdata = async (e) => {
     e.preventDefault();
     const useremail = user?.email;
-    // const formData = new FormData(e.target);
-    // const initialData = Object.fromEntries(formData.entries());
-    // const users = initialData;
+
     const form = e.target;
     const artifactname = form.artifactname.value;
     const artifactimg = form.artifactimg.value;
@@ -51,19 +49,7 @@ const Addartifact = () => {
         form.reset();
         naviget("/mypostartifact");
       });
-
-    // fetch(`http://localhost:5000/artifact`, {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(userss),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => console.log(data));
   };
-
-  const data = new Date();
 
   return (
     <div>

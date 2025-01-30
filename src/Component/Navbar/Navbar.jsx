@@ -104,6 +104,14 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
+                    to="/mylikedartifact"
+                    className=" text-xl block mx-auto font-bold"
+                  >
+                    My Liked Artifact
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
                     className=" text-xl block mx-auto font-bold"
                     to="/login"
                   >

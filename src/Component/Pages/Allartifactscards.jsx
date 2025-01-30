@@ -1,8 +1,10 @@
 import React from "react";
 import { FcLike } from "react-icons/fc";
+import { NavLink } from "react-router-dom";
 
 const Allartifactscards = ({ cards }) => {
-  const { artifactname, artifactimg, historicalcontext, likeCount } = cards;
+  const { artifactname, artifactimg, historicalcontext, likeCount, _id } =
+    cards;
   return (
     <div>
       <div className="card   border-4  shadow-xl">
@@ -23,7 +25,12 @@ const Allartifactscards = ({ cards }) => {
               </div>
               <div className="text-xl font-bold"> {likeCount} </div>
             </div>
-            <button className="text-xl btns  font-bold">View Details</button>
+            <NavLink
+              to={`/allcartifactscarddeteles/${_id}`}
+              className="text-xl btns  font-bold"
+            >
+              View Details
+            </NavLink>
           </div>
         </div>
       </div>

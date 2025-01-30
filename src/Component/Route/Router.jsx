@@ -9,6 +9,9 @@ import Allartifact from "../Pages/Allartifact";
 import Contactus from "../Pages/Contactus";
 import Mypostartifact from "../Pages/Mypostartifact";
 import Mypostupdate from "../Pages/Mypostupdate";
+import Detelscardchild from "../Pages/Detelscardchild";
+import Allartifactscarddeteles from "../Pages/Allartifactscarddeteles";
+import MyLikedArtifacts from "../Pages/MyLikedArtifacts";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +46,18 @@ const router = createBrowserRouter([
       {
         path: "/mypostupdate/:id",
         element: <Mypostupdate></Mypostupdate>,
+      },
+      {
+        path: "/detelescard/:id",
+        element: <Detelscardchild></Detelscardchild>,
+      },
+      {
+        path: "/allcartifactscarddeteles/:id",
+        element: <Allartifactscarddeteles></Allartifactscarddeteles>,
+      },
+      {
+        path: "/mylikedartifact",
+        element: <MyLikedArtifacts></MyLikedArtifacts>,
       },
       {
         path: "/contactus",
