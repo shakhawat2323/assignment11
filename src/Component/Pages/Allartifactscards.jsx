@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { FcLike } from "react-icons/fc";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import UseAuth from "../Hook/UseAuth";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const Allartifactscards = ({ cards }) => {
   const { artifactname, artifactimg, historicalcontext, likeCount, _id } =
     cards;
+
+  const { user } = UseAuth();
+
   return (
     <div>
-      <div className="card   border-4  shadow-xl">
+      <div className="card max-h-[35rem] min-h-[35rem]  border-4  shadow-xl">
         <figure>
           <img
             className="p-3 rounded-3xl w-96 h-72"
@@ -21,7 +27,9 @@ const Allartifactscards = ({ cards }) => {
           <div className="card-actions mt-3 justify-between">
             <div className="flex justify-center items-center gap-2">
               <div className="text-3xl font-bold">
-                <FcLike />
+                <button>
+                  <FcLike />
+                </button>
               </div>
               <div className="text-xl font-bold"> {likeCount} </div>
             </div>

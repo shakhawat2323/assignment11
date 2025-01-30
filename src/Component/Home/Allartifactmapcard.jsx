@@ -6,7 +6,7 @@ const Allartifactmapcard = ({ cards }) => {
     cards;
   return (
     <div>
-      <div className="card   border-4  shadow-xl">
+      <div className="card  max-h-[35rem] min-h-[35rem]   border-4  shadow-xl">
         <figure>
           <img
             className="p-3 rounded-3xl w-96 h-72"

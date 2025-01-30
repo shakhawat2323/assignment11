@@ -63,9 +63,6 @@ const Mypostartifact = () => {
       });
     }
   };
-  const ArtiactUPgrade = (id) => {
-    console.log(id);
-  };
 
   return (
     <div className="w-11/12 mx-auto">

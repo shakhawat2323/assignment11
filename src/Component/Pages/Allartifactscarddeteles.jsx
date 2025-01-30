@@ -11,6 +11,7 @@ const Allartifactscarddeteles = () => {
   const naviget = useNavigate();
 
   const [artifacts, setArtifact] = useState([]);
+  console.log(artifacts);
 
   useEffect(() => {
     allartifacts();
@@ -39,19 +40,15 @@ const Allartifactscarddeteles = () => {
   const Likecounts = (e) => {
     e.preventDefault();
 
-    // if (user.email === useremail) {
-    //   return Swal.fire({
-    //     title: "No like button for admin posts.",
-    //     icon: "error",
-    //     draggable: true,
-    //   });
-    // }
+    if (user.email === useremail) {
+      return Swal.fire({
+        title: "No like button for admin posts.",
+        icon: "error",
+        draggable: true,
+      });
+    }
 
-    // const { data } = axios.post(
-    //   `${import.meta.env.VITE_SOME_KEY}/likecount`,
-    //   artifacts
-    // );
-    // console.log(data);
+    console.log("artifacts", artifacts);
     try {
       axios
         .post(`${import.meta.env.VITE_SOME_KEY}/likecount`, {
@@ -65,17 +62,21 @@ const Allartifactscarddeteles = () => {
             icon: "success",
             draggable: true,
           });
+
           // form.reset();
-          // naviget("/mylikedartifact");
+          naviget("/mylikedartifact");
+        })
+        .catch((error) => {
+          Swal.fire({
+            title: `${error?.response?.data}`,
+            icon: "error",
+          });
         });
     } catch (err) {
-      console.log(err?.response?.data);
-      Swal.fire({
-        title: `${err?.response?.data}`,
-        icon: "error",
-      });
+      console.log(err.response?.data);
     }
   };
+
   return (
     <div className="w-11/12 mx-auto">
       <div className="card card-side bg-blue-50 shadow-2xl p-10 mt-10">
@@ -100,7 +101,7 @@ const Allartifactscarddeteles = () => {
           <div className="  ">
             <form onSubmit={Likecounts}>
               <button className="text-5xl font-bold  ">
-                <FcLike />
+                <FcLike></FcLike>
               </button>
             </form>
           </div>
