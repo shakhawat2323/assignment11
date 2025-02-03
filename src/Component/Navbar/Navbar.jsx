@@ -56,14 +56,14 @@ const Navbar = () => {
             {navlink}
           </ul>
         </div>
-        <div className="flex items-center ">
+        <NavLink to="/" className="flex items-center ">
           <img className="w-16 h-16" src={Logo} alt="" />
           <p className="text-3xl font-bold hidden lg:block">
             Sm
             <span className="text-[#d67000]">i</span>
             rok
           </p>
-        </div>
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-xl gap-3  px-1">{navlink}</ul>

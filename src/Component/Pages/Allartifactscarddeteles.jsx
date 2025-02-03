@@ -22,7 +22,7 @@ const Allartifactscarddeteles = () => {
     );
     setArtifact(data);
   };
-  // const artifactes = artifacts._id;
+
   const {
     artifactname,
     artifactimg,

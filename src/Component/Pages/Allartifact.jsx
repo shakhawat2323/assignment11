@@ -5,16 +5,27 @@ import Allartifactscards from "./Allartifactscards";
 const Allartifact = () => {
   const [artifacts, setArtifact] = useState([]);
   const [flter, setFilter] = useState("");
+  const [search, setSearch] = useState("");
+  const [sort, setSort] = useState("");
+  console.log(sort);
   useEffect(() => {
-    allartifacts().reve;
-  }, []);
-  const allartifacts = async () => {
-    const { data } = await axios.get(
-      `${import.meta.env.VITE_SOME_KEY}/allartifact?flter=${flter}`
-    );
-    setArtifact(data.reverse());
+    const allartifacts = async () => {
+      const { data } = await axios.get(
+        `${
+          import.meta.env.VITE_SOME_KEY
+        }/allartifact?flter=${flter}&search=${search}&sort=${sort}`
+      );
+      setArtifact(data.reverse());
+    };
+    allartifacts();
+  }, [flter, search, sort]);
+
+  const Resetbutton = () => {
+    setArtifact([]);
+    setFilter("");
+    setSearch("");
+    setSort("");
   };
-  console.log(flter);
   return (
     <div className="w-11/12 mx-auto">
       <div>
@@ -38,46 +49,39 @@ const Allartifact = () => {
         <div className="join">
           <div>
             <label className="input validator join-item">
-              <svg
-                className="h-[1em] opacity-50"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  strokeLinejoin="round"
-                  strokeLinecap="round"
-                  strokeWidth="2.5"
-                  fill="none"
-                  stroke="currentColor"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                </g>
-              </svg>
-              <input type="email" placeholder="Entar Artifact Title" required />
+              <input
+                name="search"
+                id="search"
+                onChange={(e) => setSearch(e.target.value)}
+                type="text"
+                value={search}
+                placeholder="Entar Artifact Title"
+              />
             </label>
-            <div className="validator-hint hidden">
-              Enter valid email address
-            </div>
           </div>
-          <button className="btn btn-neutral join-item">serch</button>
+          <button className="btn btn-neutral join-item">search</button>
         </div>
         <div className="form-control">
           <select
-            onChange={(e) => setFilter(e.target.value)}
+            onChange={(e) => setSort(e.target.value)}
             name="artifacttype"
+            id="artifacttype"
             className="select text-xl font-bold select-accent w-52 "
           >
             <option disabled selected>
-              Artifact Type
+              Sort by Like
             </option>
-            <option value="Weapons">Weapons</option>
-            <option value="Documents">Documents</option>
-            <option value="Writings">Writings</option>
+            <option value="Ascending">Ascending</option>
+            <option value="Descending">Descending</option>
           </select>
         </div>
         <div>
-          <button className="text-2xl font-bold btn btn-primary">Reset</button>
+          <button
+            onClick={Resetbutton}
+            className="text-2xl font-bold btn btn-primary"
+          >
+            Reset
+          </button>
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
