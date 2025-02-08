@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: "/allartifact",
         element: <Allartifact></Allartifact>,
-        loader: () => fetch(`http://localhost:5000/count`),
+        loader: () => fetch(`https://assignement11.vercel.app/count`),
       },
       {
         path: "/mypostartifact",
