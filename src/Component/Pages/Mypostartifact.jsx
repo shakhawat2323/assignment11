@@ -10,7 +10,6 @@ const Mypostartifact = () => {
   const { user } = UseAuth();
 
   const [artifact, SetArtifact] = useState([]);
-  console.log(artifact);
 
   useEffect(() => {
     mypostartifact();
@@ -28,7 +27,7 @@ const Mypostartifact = () => {
       const { data } = await axios.delete(
         `${import.meta.env.VITE_SOME_KEY}/arifact/${id}`
       );
-      console.log(data);
+
       if (data.deletedCount !== 0) {
         Swal.fire({
           title: "Are you sure?",

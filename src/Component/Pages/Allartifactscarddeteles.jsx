@@ -11,7 +11,6 @@ const Allartifactscarddeteles = () => {
   const naviget = useNavigate();
 
   const [artifacts, setArtifact] = useState([]);
-  console.log(artifacts);
 
   useEffect(() => {
     allartifacts();
@@ -40,23 +39,12 @@ const Allartifactscarddeteles = () => {
   const Likecounts = (e) => {
     e.preventDefault();
 
-    if (user.email === useremail) {
-      return Swal.fire({
-        title: "No like button for admin posts.",
-        icon: "error",
-        draggable: true,
-      });
-    }
-
-    console.log("artifacts", artifacts);
     try {
       axios
         .post(`${import.meta.env.VITE_SOME_KEY}/likecount`, {
           artifacts,
         })
         .then((resul) => {
-          console.log(resul.data);
-
           Swal.fire({
             title: "Successfuly Artifacts added",
             icon: "success",

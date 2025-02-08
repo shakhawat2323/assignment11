@@ -7,17 +7,16 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
   const { Loginuser, Loginwithgoogle } = UseAuth();
   const loction = useLocation();
-  console.log(loction);
+
   const naviget = useNavigate();
   const loginuser = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({ email, password });
+
     Loginuser(email, password)
       .then((result) => {
-        console.log(result.user);
         Swal.fire({
           title: "Login Successfully",
           icon: "success",
@@ -36,7 +35,7 @@ const Login = () => {
           icon: "success",
           draggable: true,
         });
-        console.log(result);
+
         naviget(loction?.state ? loction.state : "/");
       })
       .catch((error) => {

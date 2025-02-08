@@ -26,7 +26,7 @@ const Register = () => {
     createRegisterData(email, password)
       .then((result) => {
         updateProfil({ displayName: name, photoURL: photourl });
-        console.log(result.user);
+
         Swal.fire({
           title: "Register Successfully",
           icon: "success",
@@ -49,7 +49,7 @@ const Register = () => {
           icon: "success",
           draggable: true,
         });
-        console.log(result);
+
         navigate("/");
       })
       .catch((error) => {

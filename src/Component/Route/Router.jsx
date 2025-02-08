@@ -34,7 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addartifact",
-        element: <Addartifact></Addartifact>,
+        element: (
+          <PrivetRouter>
+            <Addartifact></Addartifact>,
+          </PrivetRouter>
+        ),
       },
       {
         path: "/allartifact",

@@ -1,9 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Allartifactscards from "./Allartifactscards";
-import { NavLink, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import "./page.css";
-import { Button } from "@/components/ui/button";
 
 const Allartifact = () => {
   const [artifacts, setArtifact] = useState([]);
@@ -120,18 +119,6 @@ const Allartifact = () => {
             </button>
           ))}
         </div>
-        {/* <select
-          className="btn mt-5 "
-          value={itemsperpage}
-          onChange={handalepagination}
-          name=""
-          id=""
-        >
-          <option value="5">5</option>
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="30">30</option>
-        </select> */}
       </div>
     </div>
   );

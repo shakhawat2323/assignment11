@@ -6,7 +6,6 @@ import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const LickCounttable = ({ Licke }) => {
-  console.log(Licke);
   const {
     artifactname,
     artifactimg,

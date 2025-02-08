@@ -39,8 +39,6 @@ const Addartifact = () => {
     axios
       .post(`${import.meta.env.VITE_SOME_KEY}/artifact`, userss)
       .then((resul) => {
-        console.log(resul.data);
-
         Swal.fire({
           title: "Successfuly Artifacts added",
           icon: "success",

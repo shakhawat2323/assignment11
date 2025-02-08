@@ -19,7 +19,6 @@ const Mypostupdate = () => {
     );
     setArtifact(data);
   };
-  console.log(artifacts);
 
   const submitdata = async (e) => {
     e.preventDefault();
@@ -48,13 +47,10 @@ const Mypostupdate = () => {
       useremail,
       likeCount: 0,
     };
-    console.log(userss);
 
     axios
       .put(`${import.meta.env.VITE_SOME_KEY}/artifact/${id}`, userss)
       .then((resul) => {
-        console.log(resul.data);
-
         Swal.fire({
           title: "Successfuly Artifacts Update",
           icon: "success",
