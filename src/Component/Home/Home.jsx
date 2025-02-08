@@ -2,6 +2,7 @@ import React from "react";
 import Bannar from "./Bannar";
 import Artifacthomecard from "./Artifacthomecard";
 import Newsection from "./Newsection";
+import Count from "./Count";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Bannar></Bannar>
       <Artifacthomecard></Artifacthomecard>
       <Newsection></Newsection>
+      <Count></Count>
     </div>
   );
 };

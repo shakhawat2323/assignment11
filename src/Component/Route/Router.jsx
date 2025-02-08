@@ -38,6 +38,7 @@ const router = createBrowserRouter([
       {
         path: "/allartifact",
         element: <Allartifact></Allartifact>,
+        loader: () => fetch(`http://localhost:5000/count`),
       },
       {
         path: "/mypostartifact",

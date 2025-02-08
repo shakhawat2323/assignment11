@@ -1,19 +1,29 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Allartifactscards from "./Allartifactscards";
+import { NavLink, useLoaderData } from "react-router-dom";
+import "./page.css";
+import { Button } from "@/components/ui/button";
 
 const Allartifact = () => {
   const [artifacts, setArtifact] = useState([]);
   const [flter, setFilter] = useState("");
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
-  console.log(sort);
+  const [currentpage, setCurrentpage] = useState(0);
+  const [itemsperpage, setitemsperpage] = useState(5);
+
+  const { count } = useLoaderData();
+
+  const numberofPages = Math.ceil(count / itemsperpage);
+  const paes = [...Array(numberofPages).keys()];
+
   useEffect(() => {
     const allartifacts = async () => {
       const { data } = await axios.get(
         `${
           import.meta.env.VITE_SOME_KEY
-        }/allartifact?flter=${flter}&search=${search}&sort=${sort}`
+        }/artifact?flter=${flter}&search=${search}&sort=${sort}`
       );
       setArtifact(data.reverse());
     };
@@ -25,6 +35,12 @@ const Allartifact = () => {
     setFilter("");
     setSearch("");
     setSort("");
+  };
+  const handalepagination = (e) => {
+    const vul = parseInt(e.target.value);
+
+    setitemsperpage(vul);
+    setitemsperpage(0);
   };
   return (
     <div className="w-11/12 mx-auto">
@@ -88,6 +104,33 @@ const Allartifact = () => {
         {artifacts.map((cards, index) => (
           <Allartifactscards key={index} cards={cards}></Allartifactscards>
         ))}
+      </div>
+      <div className="flex justify-center items-center gap-5">
+        <div>
+          {paes.map((pages) => (
+            <button
+              key={pages}
+              onClick={() => setCurrentpage(pages)}
+              className={`btn mt-5 ml-3 ${
+                currentpage === pages && "background"
+              }`}
+            >
+              {pages}
+            </button>
+          ))}
+        </div>
+        {/* <select
+          className="btn mt-5 "
+          value={itemsperpage}
+          onChange={handalepagination}
+          name=""
+          id=""
+        >
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select> */}
       </div>
     </div>
   );
