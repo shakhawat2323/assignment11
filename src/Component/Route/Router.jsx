@@ -12,6 +12,7 @@ import Mypostupdate from "../Pages/Mypostupdate";
 import Detelscardchild from "../Pages/Detelscardchild";
 import Allartifactscarddeteles from "../Pages/Allartifactscarddeteles";
 import MyLikedArtifacts from "../Pages/MyLikedArtifacts";
+import PrivetRouter from "./../FIrbase/AuthProvider/PrivetRouter";
 
 const router = createBrowserRouter([
   {
@@ -42,23 +43,43 @@ const router = createBrowserRouter([
       },
       {
         path: "/mypostartifact",
-        element: <Mypostartifact></Mypostartifact>,
+        element: (
+          <PrivetRouter>
+            <Mypostartifact></Mypostartifact>
+          </PrivetRouter>
+        ),
       },
       {
         path: "/mypostupdate/:id",
-        element: <Mypostupdate></Mypostupdate>,
+        element: (
+          <PrivetRouter>
+            <Mypostupdate></Mypostupdate>,
+          </PrivetRouter>
+        ),
       },
       {
         path: "/detelescard/:id",
-        element: <Detelscardchild></Detelscardchild>,
+        element: (
+          <PrivetRouter>
+            <Detelscardchild></Detelscardchild>
+          </PrivetRouter>
+        ),
       },
       {
         path: "/allcartifactscarddeteles/:id",
-        element: <Allartifactscarddeteles></Allartifactscarddeteles>,
+        element: (
+          <PrivetRouter>
+            <Allartifactscarddeteles></Allartifactscarddeteles>
+          </PrivetRouter>
+        ),
       },
       {
         path: "/mylikedartifact",
-        element: <MyLikedArtifacts></MyLikedArtifacts>,
+        element: (
+          <PrivetRouter>
+            <MyLikedArtifacts></MyLikedArtifacts>
+          </PrivetRouter>
+        ),
       },
       {
         path: "/contactus",

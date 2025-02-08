@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import video from "../../../../public/video/loginimg.mp4";
 import UseAuth from "../../Hook/UseAuth";
 import Swal from "sweetalert2";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { Loginuser, Loginwithgoogle } = UseAuth();
+  const loction = useLocation();
+  console.log(loction);
   const naviget = useNavigate();
   const loginuser = (e) => {
     e.preventDefault();
@@ -21,7 +23,7 @@ const Login = () => {
           icon: "success",
           draggable: true,
         });
-        naviget("/");
+        naviget(loction?.state ? loction.state : "/");
       })
       .catch((err) => console.log(err.message));
   };
@@ -35,7 +37,7 @@ const Login = () => {
           draggable: true,
         });
         console.log(result);
-        naviget("/");
+        naviget(loction?.state ? loction.state : "/");
       })
       .catch((error) => {
         console.log(error.message);

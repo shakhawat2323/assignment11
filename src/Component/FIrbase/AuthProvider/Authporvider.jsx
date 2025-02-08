@@ -19,20 +19,25 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const createRegisterData = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const Loginuser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   const updateProfil = (updateData) => {
+    setLoading(true);
     return updateProfile(auth.currentUser, updateData);
   };
   const Loginwithgoogle = () => {
+    setLoading(true);
     return signInWithPopup(auth, provider);
   };
 
   const Logout = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
@@ -52,6 +57,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, async (currentuser) => {
       if (currentuser?.email) {
         setUser(currentuser);
+        setLoading(false);
 
         // const { data } = await axios.post(
         //   `${import.meta.env.VITE_SOME_KEY}/jwt`,

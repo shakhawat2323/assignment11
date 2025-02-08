@@ -23,8 +23,9 @@ const Allartifact = () => {
       const { data } = await axios.get(
         `${
           import.meta.env.VITE_SOME_KEY
-        }/artifact?flter=${flter}&search=${search}&sort=${sort}`
+        }/allartifact?flter=${flter}&search=${search}&sort=${sort}`
       );
+
       setArtifact(data.reverse());
     };
     allartifacts();
