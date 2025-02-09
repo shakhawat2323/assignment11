@@ -11,7 +11,8 @@ const Detelscardchild = () => {
   const { id } = useParams();
   const naviget = useNavigate();
 
-  const [artifacts, setArtifact] = useState([]);
+  const [artifacts, setArtifact] = useState({});
+  console.log(artifacts);
   useEffect(() => {
     allartifacts();
   }, []);

@@ -43,8 +43,7 @@ const Allartifactscarddeteles = () => {
     try {
       axios
         .post(`${import.meta.env.VITE_SOME_KEY}/likecount`, {
-          ...artifacts,
-          useremail: user.email,
+          artifacts: { ...artifacts, useremail: user.email },
         })
         .then((resul) => {
           Swal.fire({
