@@ -4,13 +4,9 @@ const Footer = () => {
   return (
     <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
       <aside>
-        <img className="w-8" src={Logo} alt="" />
+        <img className="w-16 ml-8" src={Logo} alt="" />
 
-        <p>
-          ACME Industries Ltd.
-          <br />
-          Providing reliable tech since 1992
-        </p>
+        <p className="text-4xl font-bold">Smirok</p>
       </aside>
       <nav>
         <h6 className="footer-title">Services</h6>

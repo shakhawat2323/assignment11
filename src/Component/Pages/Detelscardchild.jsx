@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 
 const Detelscardchild = () => {
   const { user } = UseAuth();
+
   const { id } = useParams();
   const naviget = useNavigate();
 
@@ -47,7 +48,7 @@ const Detelscardchild = () => {
     try {
       axios
         .post(`${import.meta.env.VITE_SOME_KEY}/likecount`, {
-          artifacts,
+          artifacts: { ...artifacts, useremail: user.email },
         })
         .then((resul) => {
           Swal.fire({

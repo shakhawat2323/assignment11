@@ -9,6 +9,7 @@ const Allartifactscarddeteles = () => {
   const { user } = UseAuth();
   const { id } = useParams();
   const naviget = useNavigate();
+  console.log(user);
 
   const [artifacts, setArtifact] = useState([]);
 
@@ -42,7 +43,8 @@ const Allartifactscarddeteles = () => {
     try {
       axios
         .post(`${import.meta.env.VITE_SOME_KEY}/likecount`, {
-          artifacts,
+          ...artifacts,
+          useremail: user.email,
         })
         .then((resul) => {
           Swal.fire({

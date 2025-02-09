@@ -38,10 +38,7 @@ const MyLikedArtifacts = () => {
           </thead>
           <tbody>
             {artifact.map((Licke, index) => (
-              <LickCounttable
-                Licke={Licke.artifacts}
-                key={index}
-              ></LickCounttable>
+              <LickCounttable Licke={Licke} key={index}></LickCounttable>
             ))}
           </tbody>
         </table>
