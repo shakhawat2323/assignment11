@@ -7,7 +7,7 @@ const Mainlaut = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="min-h-[calc(100vh-250px)]">
+      <div className="min-h-[calc(100vh-250px)] mt-[88px]">
         <Outlet></Outlet>
       </div>
       <div className="mt-5">

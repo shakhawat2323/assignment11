@@ -80,7 +80,7 @@ const Detelscardchild = () => {
     <div className="w-11/12 mx-auto">
       <div className="card card-side bg-blue-50 shadow-2xl p-10 mt-10">
         <figure>
-          <img className="w-96" src={artifactimg} alt="Movie" />
+          <img className="w-[900px]" src={artifactimg} alt="Movie" />
         </figure>
         <div className="card-body">
           <h2 className=" text-3xl  font-bold">
