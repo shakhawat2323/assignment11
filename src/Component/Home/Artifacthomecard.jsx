@@ -4,6 +4,7 @@ import "./artifact.css";
 
 import Allartifactmapcard from "./Allartifactmapcard";
 import { NavLink } from "react-router-dom";
+import Tigar from "../../../public/home/tiger.png";
 const Artifacthomecard = () => {
   const [artifacts, setArtifact] = useState([]);
   useEffect(() => {
@@ -36,7 +37,7 @@ const Artifacthomecard = () => {
         <div className="flex items-center gap-20 h-96">
           <div className="flex-col w-[50%] ">
             <div>
-              <img src="/public/home/tiger.png" alt="" />
+              <img src={Tigar} alt="" />
             </div>
           </div>
           <div className="flex-col w-[50%] ">

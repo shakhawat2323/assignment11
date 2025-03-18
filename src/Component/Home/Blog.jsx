@@ -6,6 +6,13 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import Blog1 from "../../../public/img/Logo1.jpg";
+import Blog2 from "../../../public/img/logo2.jpg";
+import Blog3 from "../../../public/img/Logo3.jpg";
+import Blog4 from "../../../public/img/Logo4.jpg";
+import Blog5 from "../../../public/img/Logo5.jpg";
+import Blog6 from "../../../public/img/Logo6.jpg";
+import Blog7 from "../../../public/img/Logo7.jpg";
 const Blog = () => {
   return (
     <div className="w-11/12 mx-auto">
@@ -20,7 +27,7 @@ const Blog = () => {
           <div className=" h-[470px] bg-[#d3d3d3] rounded-lg shadow-lg overflow-hidden">
             <figure>
               <img
-                src="/public/img/Logo1.jpg "
+                src={Blog1}
                 className="w-full px-3 py-3 rounded-3xl  h-[250px] object-cover hover:scale-105 transition-transform"
                 alt="Shoes"
               />
@@ -42,7 +49,7 @@ const Blog = () => {
           <div className=" h-[470px] bg-[#d3d3d3] rounded-lg shadow-lg overflow-hidden">
             <figure>
               <img
-                src="/public/img/Logo2.jpg "
+                src={Blog2}
                 className="w-full px-3 py-3 rounded-3xl  h-[250px] object-cover hover:scale-105 transition-transform"
                 alt="Shoes"
               />
@@ -64,7 +71,7 @@ const Blog = () => {
           <div className=" h-[470px] bg-[#d3d3d3] rounded-lg shadow-lg overflow-hidden">
             <figure>
               <img
-                src="/public/img/Logo3.jpg "
+                src={Blog3}
                 className="w-full px-3 py-3 rounded-3xl  h-[250px] object-cover hover:scale-105 transition-transform"
                 alt="Shoes"
               />
@@ -86,7 +93,7 @@ const Blog = () => {
           <div className=" h-[470px] bg-[#d3d3d3] rounded-lg shadow-lg overflow-hidden">
             <figure>
               <img
-                src="/public/img/Logo4.jpg "
+                src={Blog4}
                 className="w-full px-3 py-3 rounded-3xl  h-[250px] object-cover hover:scale-105 transition-transform"
                 alt="Shoes"
               />
@@ -106,7 +113,7 @@ const Blog = () => {
           <div className=" h-[470px] bg-[#d3d3d3] rounded-lg shadow-lg overflow-hidden">
             <figure>
               <img
-                src="/public/img/Logo5.jpg "
+                src={Blog5}
                 className="w-full px-3 py-3 rounded-3xl  h-[250px] object-cover hover:scale-105 transition-transform"
                 alt="Shoes"
               />
@@ -128,7 +135,7 @@ const Blog = () => {
           <div className=" h-[470px] bg-[#d3d3d3] rounded-lg shadow-lg overflow-hidden">
             <figure>
               <img
-                src="/public/img/Logo6.jpg "
+                src={Blog6}
                 className="w-full px-3 py-3 rounded-3xl  h-[250px] object-cover hover:scale-105 transition-transform"
                 alt="Shoes"
               />
