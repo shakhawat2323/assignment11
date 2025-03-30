@@ -1,4 +1,4 @@
-.navbarlogin {
+/* .navbarlogin {
   background-image: linear-gradient(
     to right,
     #9d50bb 0%,
@@ -17,7 +17,7 @@
 }
 
 .navbarlogin:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
@@ -25,27 +25,21 @@
 /* register button  */
 
 .navbarregister {
-  background-image: linear-gradient(
-    to right,
-    #ff00cc 0%,
-    #333399 51%,
-    #ff00cc 100%
-  );
-}
-.navbarregister {
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  transition: 0.5s !important;
+  background-color: #7304a3 !important;
+  background-size: 200% auto !important;
+  color: white !important;
+  font-weight: 600 !important;
+
+  border-radius: 10px !important;
 }
 
 .navbarregister:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+  background-position: right center !important;
+  color: white !important;
+  font-weight: 600 !important;
+  background-color: black !important;
+  text-decoration: none !important;
 }
-
-/* navbar digient  */

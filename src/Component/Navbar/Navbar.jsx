@@ -4,6 +4,7 @@ import DarkandLight from "../Dark and lignt/DarkandLight";
 import UseAuth from "../Hook/UseAuth";
 import { FaUserAlt } from "react-icons/fa";
 import "./Navbar.css";
+import Button from "@mui/material/Button";
 
 const Navbar = () => {
   const { user, Logout } = UseAuth();
@@ -29,7 +30,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className=" w-full bg-purple-400   top-0  fixed z-50  ">
+    <div className=" w-full bg-[#E5B8F4]   top-0  fixed z-50  ">
       <div className="navbar  py-3">
         <div className="navbar-start ">
           <div className="dropdown">
@@ -96,51 +97,96 @@ const Navbar = () => {
                   tabIndex={0}
                   className="menu menu-sm  dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-60 p-2 shadow"
                 >
-                  <li>
-                    <NavLink
-                      to="/mypostartifact"
-                      className=" text-xl block mx-auto font-bold"
-                    >
-                      My Post Artifact
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/mylikedartifact"
-                      className=" text-xl block mx-auto font-bold"
-                    >
-                      My Liked Artifact
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className=" text-xl block mx-auto font-bold"
-                      to="/login"
-                    >
-                      Login
-                    </NavLink>
-                  </li>
-                  <li>
-                    <button
-                      className=" text-xl block mx-auto font-bold"
-                      onClick={logoutbtn}
-                    >
-                      Logout
-                    </button>
-                  </li>
+                  <div>
+                    <div>
+                      <div className="h-72 z-50 ">
+                        <div className=" flex items-center justify-center gap-2 pb-3   border-b border-[rgba(0,0,0,0.1)]">
+                          <img
+                            className="w-14 h-14 rounded-full  overflow-hidden"
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                          />
+                          <div className="">
+                            <h1 className="text-xl font-semibold">
+                              Shakhawat islam
+                            </h1>
+                            <h1 className="text-sm font-[400] w-[160px] overflow-x-scroll">
+                              shakhawathossain208@gmail.com
+                            </h1>
+                          </div>
+                        </div>
+                        <div className="w-full ">
+                          <li className="">
+                            <NavLink
+                              to="/mypostartifact"
+                              className=" text-xl block mx-auto w-full font-bold"
+                            >
+                              My Profile
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/mypostartifact"
+                              className=" text-xl  w-full block mx-auto font-bold"
+                            >
+                              My Post Artifact
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/mylikedartifact"
+                              className=" text-xl  w-full block mx-auto font-bold"
+                            >
+                              My Liked Artifact
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard"
+                              className=" text-xl  w-full block mx-auto font-bold"
+                            >
+                              Dashboard
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              className=" text-xl  w-full block mx-auto font-bold"
+                              to="/login"
+                            >
+                              Login
+                            </NavLink>
+                          </li>
+                          <li>
+                            <button
+                              className=" text-xl  w-full block mx-auto font-bold"
+                              onClick={logoutbtn}
+                            >
+                              Logout
+                            </button>
+                          </li>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </ul>
               </div>
             ) : (
               <div className="inline-flex gap-3">
-                <NavLink to="/login" className="btn navbarlogin ">
-                  Login
-                </NavLink>
-                <NavLink
-                  to="/register"
-                  className="btn hidden lg:block navbarregister items-center pt-2"
-                >
-                  Register
-                </NavLink>
+                <Button className="navbarregister">
+                  {" "}
+                  <NavLink to="/login" className="  ">
+                    Login
+                  </NavLink>
+                </Button>
+
+                <Button className="navbarregister">
+                  {" "}
+                  <NavLink
+                    to="/register"
+                    className=" hidden lg:block  items-center "
+                  >
+                    Register
+                  </NavLink>
+                </Button>
               </div>
             )}
           </div>

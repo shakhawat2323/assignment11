@@ -13,6 +13,7 @@ import Detelscardchild from "../Pages/Detelscardchild";
 import Allartifactscarddeteles from "../Pages/Allartifactscarddeteles";
 import MyLikedArtifacts from "../Pages/MyLikedArtifacts";
 import PrivetRouter from "./../FIrbase/AuthProvider/PrivetRouter";
+import Dashboard from "../Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +91,11 @@ const router = createBrowserRouter([
         element: <Contactus></Contactus>,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [],
   },
 ]);
 export default router;

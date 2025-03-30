@@ -26,32 +26,23 @@
 /* All Artifacts */
 
 .allartifacts {
-  background-image: linear-gradient(
-    to right,
-    #ff00cc 0%,
-    #333399 51%,
-    #ff00cc 100%
-  );
-}
-.allartifacts {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 280px;
-  margin-top: 10px;
-  justify-content: center;
-  padding: 15px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
+  text-align: center !important;
+  margin-top: 20px;
+  padding: 7px 10px !important;
+  text-transform: uppercase !important;
+  transition: 0.5s !important;
+  background-color: #7304a3 !important;
+  background-size: 200% auto !important;
+  color: white !important;
+  font-weight: 600 !important;
 
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 .allartifacts:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+  background-position: right center !important;
+  color: white !important;
+  font-weight: 600 !important;
+  background-color: black !important;
+  text-decoration: none !important;
 }

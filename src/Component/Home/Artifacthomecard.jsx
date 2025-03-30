@@ -8,7 +8,7 @@ import Tigar from "../../../public/home/tiger.png";
 const Artifacthomecard = () => {
   const [artifacts, setArtifact] = useState([]);
   useEffect(() => {
-    allartifacts().reve;
+    allartifacts();
   }, []);
   const allartifacts = async () => {
     const { data } = await axios.get(
@@ -28,7 +28,7 @@ const Artifacthomecard = () => {
       <div className="flex justify-center">
         <NavLink
           to="/allartifact"
-          className="allartifacts  text-2xl font-bold  "
+          className="allartifacts  text-xl font-semibold  "
         >
           All Artifacts
         </NavLink>
