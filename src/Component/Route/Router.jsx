@@ -34,14 +34,7 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
-      {
-        path: "/addartifact",
-        element: (
-          <PrivetRouter>
-            <Addartifact></Addartifact>,
-          </PrivetRouter>
-        ),
-      },
+
       {
         path: "/allartifact",
         element: <Allartifact></Allartifact>,
@@ -79,14 +72,7 @@ const router = createBrowserRouter([
           </PrivetRouter>
         ),
       },
-      {
-        path: "/mylikedartifact",
-        element: (
-          <PrivetRouter>
-            <MyLikedArtifacts></MyLikedArtifacts>
-          </PrivetRouter>
-        ),
-      },
+
       {
         path: "/contactus",
         element: <Contactus></Contactus>,
@@ -95,11 +81,35 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivetRouter>
+        <Dashboard></Dashboard>
+      </PrivetRouter>
+    ),
     children: [
       {
         path: "profile",
         element: <Profile />,
+      },
+      {
+        path: "addartifact",
+        element: <Addartifact></Addartifact>,
+      },
+      {
+        path: "mypostartifact",
+        element: (
+          <PrivetRouter>
+            <Mypostartifact></Mypostartifact>
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "mylikedartifact",
+        element: (
+          <PrivetRouter>
+            <MyLikedArtifacts></MyLikedArtifacts>
+          </PrivetRouter>
+        ),
       },
     ],
   },

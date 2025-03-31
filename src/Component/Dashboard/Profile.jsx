@@ -6,7 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import UseAuth from "../Hook/UseAuth";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiEdit } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
 import Gallary from "../Home/Gallary";
@@ -60,12 +60,11 @@ const Profile = () => {
       <div className="w-full ">
         <div>
           <Tabs>
-            <TabList className="flex items-center gap-16 justify-center py-3 bg-purple-400">
+            <TabList className="flex items-center gap-16 px-6 py-3 bg-purple-400">
               <Tab className="text-[20px] cursor-pointer px-2">Post</Tab>
-              <Tab className="text-[20px] cursor-pointer  px-2">
+              {/* <Tab className="text-[20px] cursor-pointer  px-2">
                 Edit Profile
-              </Tab>
-              <Tab className="text-[20px] cursor-pointer  px-2">About me</Tab>
+              </Tab> */}
             </TabList>
 
             <TabPanel>
@@ -145,12 +144,18 @@ const Profile = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-xl font-semibold mt-5">Gallary</p>
+                  <div className="flex justify-end px-9">
+                    <NavLink to="/allartifact" className="allartifacts    ">
+                      All Artifacts
+                    </NavLink>
+                  </div>
+                </div>
+                <div>
                   <Gallary />
                 </div>
               </div>
             </TabPanel>
-            <TabPanel>
+            {/* <TabPanel>
               <div className="px-5 pb-96">
                 <p className="text-xl font-bold mt-5 pb-10">
                   Personal Information
@@ -208,7 +213,7 @@ const Profile = () => {
             </TabPanel>
             <TabPanel>
               <h2>Any content 3</h2>
-            </TabPanel>
+            </TabPanel> */}
           </Tabs>
         </div>
       </div>

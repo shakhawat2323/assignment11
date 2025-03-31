@@ -137,7 +137,7 @@ const Navbar = () => {
                               Contact Us
                             </NavLink>
                           </li>
-                          {/* <li>
+                          <li>
                             <NavLink
                               to="/mypostartifact"
                               className=" text-xl  w-full block mx-auto font-bold"
@@ -152,7 +152,7 @@ const Navbar = () => {
                             >
                               My Liked Artifact
                             </NavLink>
-                          </li> */}
+                          </li>
                           <li>
                             <NavLink
                               to="/dashboard"

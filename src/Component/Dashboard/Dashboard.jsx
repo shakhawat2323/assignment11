@@ -9,8 +9,10 @@ import { MdOutlinePostAdd } from "react-icons/md";
 import { MdAddchart } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { RiBloggerLine } from "react-icons/ri";
+import UseAuth from "../Hook/UseAuth";
 
 const Dashboard = () => {
+  const { user } = UseAuth();
   return (
     <div className="flex  gap-3">
       <div className="col1 w-[20%] px-2 sticky top-0 z-50 border-r border-[rgba(0,0,0,0.1)] h-screen overflow-y-scroll">
@@ -18,7 +20,7 @@ const Dashboard = () => {
           <img className="w-24 h-24 mt-5 mx-auto " src={Logo} alt="" />
           <h1 className="text-4xl font-bold text-center">Admin</h1>
           <h1 className="text-2xl font-bold text-center py-2 ">
-            shakhawat islam
+            {user?.displayName}
           </h1>
         </div>
         <div>
@@ -37,7 +39,7 @@ const Dashboard = () => {
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
-                  // to="/allartifact"
+                  to="/dashboard/addartifact"
                   className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
                 >
                   <AiOutlineBulb />
@@ -48,7 +50,7 @@ const Dashboard = () => {
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
-                  // to="/allartifact"
+                  to="/dashboard/mylikedartifact"
                   className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
                 >
                   <SlLike />
@@ -59,7 +61,7 @@ const Dashboard = () => {
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
-                  // to="/allartifact"
+                  to="/dashboard/mypostartifact"
                   className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
                 >
                   <MdOutlinePostAdd />

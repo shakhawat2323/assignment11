@@ -51,14 +51,6 @@ const Gallary = () => {
           </a> */}
         </LightGallery>
       </div>
-      <div className="mt-5 mb-5 text-center">
-        <NavLink
-          to="/allartifact"
-          className="allartifacts  text-xl font-semibold  "
-        >
-          All Gallary
-        </NavLink>
-      </div>
     </div>
   );
 };

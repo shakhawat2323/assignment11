@@ -46,11 +46,7 @@ const LickCounttable = ({ Licke }) => {
           {likeCount}
         </Link>
       </td>
-      <th>
-        <button className="btn btn-ghost  text-4xl text-red-600">
-          <MdDelete />
-        </button>
-      </th>
+      <th></th>
     </tr>
   );
 };
