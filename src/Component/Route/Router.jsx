@@ -14,6 +14,7 @@ import Allartifactscarddeteles from "../Pages/Allartifactscarddeteles";
 import MyLikedArtifacts from "../Pages/MyLikedArtifacts";
 import PrivetRouter from "./../FIrbase/AuthProvider/PrivetRouter";
 import Dashboard from "../Dashboard/Dashboard";
+import Profile from "../Dashboard/Profile";
 
 const router = createBrowserRouter([
   {
@@ -95,7 +96,12 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
-    children: [],
+    children: [
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+    ],
   },
 ]);
 export default router;

@@ -21,11 +21,17 @@ const Navbar = () => {
         <NavLink to="/allartifact">All Artifact</NavLink>
       </li>
       <li>
-        <NavLink to="/addartifact">Add Artifact</NavLink>
+        <NavLink to="/allartifact">Gallery</NavLink>
       </li>
       <li>
-        <NavLink to="/contactus">Contact Us</NavLink>
+        <NavLink to="/allartifact">Blog</NavLink>
       </li>
+      <li>
+        <NavLink to="/allartifact">News</NavLink>
+      </li>
+      {/* <li>
+        <NavLink to="/addartifact">Add Artifact</NavLink>
+      </li> */}
     </>
   );
 
@@ -117,13 +123,21 @@ const Navbar = () => {
                         <div className="w-full ">
                           <li className="">
                             <NavLink
-                              to="/mypostartifact"
                               className=" text-xl block mx-auto w-full font-bold"
+                              to="/mypostartifact"
                             >
                               My Profile
                             </NavLink>
                           </li>
                           <li>
+                            <NavLink
+                              className=" text-xl block mx-auto w-full font-bold"
+                              to="/contactus"
+                            >
+                              Contact Us
+                            </NavLink>
+                          </li>
+                          {/* <li>
                             <NavLink
                               to="/mypostartifact"
                               className=" text-xl  w-full block mx-auto font-bold"
@@ -138,7 +152,7 @@ const Navbar = () => {
                             >
                               My Liked Artifact
                             </NavLink>
-                          </li>
+                          </li> */}
                           <li>
                             <NavLink
                               to="/dashboard"

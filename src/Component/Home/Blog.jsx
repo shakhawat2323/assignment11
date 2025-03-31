@@ -13,6 +13,7 @@ import Blog4 from "../../../public/img/Logo4.jpg";
 import Blog5 from "../../../public/img/Logo5.jpg";
 import Blog6 from "../../../public/img/Logo6.jpg";
 import Blog7 from "../../../public/img/Logo7.jpg";
+import { NavLink } from "react-router-dom";
 const Blog = () => {
   return (
     <div className="w-11/12 mx-auto">
@@ -152,6 +153,16 @@ const Blog = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+      <div>
+        <div className="mt-5 mb-5 text-center">
+          <NavLink
+            to="/allartifact"
+            className="allartifacts  text-xl font-semibold  "
+          >
+            All Blog
+          </NavLink>
+        </div>
+      </div>
     </div>
   );
 };

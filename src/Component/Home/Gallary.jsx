@@ -15,6 +15,7 @@ import Img3 from "../../../public/home/img3.jpg";
 import Img4 from "../../../public/home/img4.jpg";
 import Img5 from "../../../public/home/img5.jpg";
 import Img6 from "../../../public/home/img6.jpg";
+import { NavLink } from "react-router-dom";
 // import Img7 from "../../../public/home/img7.jpg";
 
 const Gallary = () => {
@@ -49,6 +50,14 @@ const Gallary = () => {
             <img className="min-w-96 min-h-96" alt="img1" src={Img7} />
           </a> */}
         </LightGallery>
+      </div>
+      <div className="mt-5 mb-5 text-center">
+        <NavLink
+          to="/allartifact"
+          className="allartifacts  text-xl font-semibold  "
+        >
+          All Gallary
+        </NavLink>
       </div>
     </div>
   );
