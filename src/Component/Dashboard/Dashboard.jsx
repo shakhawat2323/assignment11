@@ -13,7 +13,7 @@ import { RiBloggerLine } from "react-icons/ri";
 const Dashboard = () => {
   return (
     <div className="flex  gap-3">
-      <div className="col1 w-[250px] px-2   border-r border-[rgba(0,0,0,0.1)] h-screen overflow-y-scroll">
+      <div className="col1 w-[20%] px-2 sticky top-0 z-50 border-r border-[rgba(0,0,0,0.1)] h-screen overflow-y-scroll">
         <div className="border-b border-[rgba(0,0,0,0.1)]">
           <img className="w-24 h-24 mt-5 mx-auto " src={Logo} alt="" />
           <h1 className="text-4xl font-bold text-center">Admin</h1>
@@ -160,7 +160,7 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
-      <div className="col2  ">
+      <div className="col2 w-[80%] ">
         <Outlet />
       </div>
     </div>

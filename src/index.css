@@ -66,3 +66,10 @@
     @apply bg-background text-foreground;
   }
 } */
+.react-tabs__tab--selected {
+  background: #008000 !important;
+  border-color: #aaa !important;
+  color: black !important;
+  border-radius: 5px 5px 0 0 !important;
+  cursor: pointer !important;
+}
