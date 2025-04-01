@@ -21,7 +21,7 @@ const Navbar = () => {
         <NavLink to="/allartifact">All Artifact</NavLink>
       </li>
       <li>
-        <NavLink to="/allartifact">Gallery</NavLink>
+        <NavLink to="/gallary">Gallery</NavLink>
       </li>
       <li>
         <NavLink to="/allartifact">Blog</NavLink>
@@ -121,14 +121,6 @@ const Navbar = () => {
                           </div>
                         </div>
                         <div className="w-full ">
-                          <li className="">
-                            <NavLink
-                              className=" text-xl block mx-auto w-full font-bold"
-                              to="/mypostartifact"
-                            >
-                              My Profile
-                            </NavLink>
-                          </li>
                           <li>
                             <NavLink
                               className=" text-xl block mx-auto w-full font-bold"
@@ -137,22 +129,7 @@ const Navbar = () => {
                               Contact Us
                             </NavLink>
                           </li>
-                          <li>
-                            <NavLink
-                              to="/mypostartifact"
-                              className=" text-xl  w-full block mx-auto font-bold"
-                            >
-                              My Post Artifact
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              to="/mylikedartifact"
-                              className=" text-xl  w-full block mx-auto font-bold"
-                            >
-                              My Liked Artifact
-                            </NavLink>
-                          </li>
+
                           <li>
                             <NavLink
                               to="/dashboard"

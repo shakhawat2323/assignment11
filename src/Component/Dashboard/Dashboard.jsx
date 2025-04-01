@@ -69,17 +69,7 @@ const Dashboard = () => {
                 </NavLink>
               </Button>
             </li>
-            <li className="pb-2">
-              <Button className="!w-full !text-black">
-                <NavLink
-                  // to="/allartifact"
-                  className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
-                >
-                  <MdAddchart />
-                  Add Gallary
-                </NavLink>
-              </Button>
-            </li>
+
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink

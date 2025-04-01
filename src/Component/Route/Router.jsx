@@ -15,6 +15,7 @@ import MyLikedArtifacts from "../Pages/MyLikedArtifacts";
 import PrivetRouter from "./../FIrbase/AuthProvider/PrivetRouter";
 import Dashboard from "../Dashboard/Dashboard";
 import Profile from "../Dashboard/Profile";
+import Gallerys from "../Pages/Gallerys";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
             <Mypostartifact></Mypostartifact>
           </PrivetRouter>
         ),
+      },
+      {
+        path: "/gallary",
+        element: <Gallerys />,
       },
       {
         path: "/mypostupdate/:id",
@@ -88,7 +93,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "profile",
+        path: "",
         element: <Profile />,
       },
       {

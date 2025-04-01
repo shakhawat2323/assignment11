@@ -51,6 +51,13 @@ const Gallary = () => {
           </a> */}
         </LightGallery>
       </div>
+      <div>
+        <div className="flex justify-center px-9">
+          <NavLink to="/gallary" className="allartifacts    ">
+            All Gallery
+          </NavLink>
+        </div>
+      </div>
     </div>
   );
 };
