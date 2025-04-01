@@ -28,7 +28,7 @@ const Dashboard = () => {
             <li className="pb-2">
               <Button className="!w-full  !text-black">
                 <NavLink
-                  to="/dashboard/profile"
+                  // to="/dashboard/profile"
                   className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
                 >
                   <CgProfile />
@@ -84,7 +84,7 @@ const Dashboard = () => {
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
-                  // to="/allartifact"
+                  to="/dashboard/blog"
                   className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
                 >
                   <RiBloggerLine />

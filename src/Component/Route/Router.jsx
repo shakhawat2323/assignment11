@@ -16,6 +16,7 @@ import PrivetRouter from "./../FIrbase/AuthProvider/PrivetRouter";
 import Dashboard from "../Dashboard/Dashboard";
 import Profile from "../Dashboard/Profile";
 import Gallerys from "../Pages/Gallerys";
+import AddBlog from "../Pages/AddBlog";
 
 const router = createBrowserRouter([
   {
@@ -113,6 +114,14 @@ const router = createBrowserRouter([
         element: (
           <PrivetRouter>
             <MyLikedArtifacts></MyLikedArtifacts>
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "blog",
+        element: (
+          <PrivetRouter>
+            <AddBlog></AddBlog>
           </PrivetRouter>
         ),
       },
