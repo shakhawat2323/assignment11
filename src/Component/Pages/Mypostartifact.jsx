@@ -151,7 +151,7 @@ const Mypostartifact = () => {
   const { user } = UseAuth();
   const [artifact, setArtifact] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8; // প্রতি পেজে কতগুলো আইটেম দেখাবে
+  const itemsPerPage = 8; 
 
   useEffect(() => {
     if (user?.email) {

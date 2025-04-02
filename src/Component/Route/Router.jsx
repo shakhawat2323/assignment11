@@ -17,6 +17,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import Profile from "../Dashboard/Profile";
 import Gallerys from "../Pages/Gallerys";
 import AddBlog from "../Pages/AddBlog";
+import Blogs from "../Pages/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,14 @@ const router = createBrowserRouter([
       {
         path: "/contactus",
         element: <Contactus></Contactus>,
+      },
+      {
+        path: "/blogs",
+        element: (
+          <PrivetRouter>
+            <Blogs></Blogs>,
+          </PrivetRouter>
+        ),
       },
     ],
   },
