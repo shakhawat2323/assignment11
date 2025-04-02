@@ -24,7 +24,7 @@ const Blogcard = ({ item, fetchBlogs }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const { data } = await axios
-          .delete(`http://localhost:5000/blogs/${id}`)
+          .delete(`${import.meta.env.VITE_SOME_KEY}/${id}`)
           .then((result) => {
             Swal.fire({
               title: "Deleted!",

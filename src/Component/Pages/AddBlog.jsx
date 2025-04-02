@@ -51,7 +51,7 @@ const AddBlog = () => {
         const blogData = { title, image: imageUrl, description, email };
 
         const datas = await axios
-          .post(`http://localhost:5000/blog`, blogData)
+          .post(`${import.meta.env.VITE_SOME_KEY}/blog`, blogData)
           .then((result) => {
             console.log(result);
             Swal.fire({
