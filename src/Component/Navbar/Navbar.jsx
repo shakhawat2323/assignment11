@@ -26,12 +26,6 @@ const Navbar = () => {
       <li>
         <NavLink to="/blogs">Blog</NavLink>
       </li>
-      <li>
-        <NavLink to="/allartifact">News</NavLink>
-      </li>
-      {/* <li>
-        <NavLink to="/addartifact">Add Artifact</NavLink>
-      </li> */}
     </>
   );
 

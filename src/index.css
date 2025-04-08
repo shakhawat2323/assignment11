@@ -73,3 +73,7 @@
   border-radius: 5px 5px 0 0 !important;
   cursor: pointer !important;
 }
+
+.hover\:underline:hover {
+  text-decoration-line: none !important;
+}

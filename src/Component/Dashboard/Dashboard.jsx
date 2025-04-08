@@ -10,6 +10,8 @@ import { MdAddchart } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { RiBloggerLine } from "react-icons/ri";
 import UseAuth from "../Hook/UseAuth";
+import { GiGlowingArtifact } from "react-icons/gi";
+import { RiGalleryLine } from "react-icons/ri";
 
 const Dashboard = () => {
   const { user } = UseAuth();
@@ -70,7 +72,7 @@ const Dashboard = () => {
               </Button>
             </li>
 
-            <li className="pb-2">
+            {/* <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
                   // to="/allartifact"
@@ -80,7 +82,7 @@ const Dashboard = () => {
                   Add News
                 </NavLink>
               </Button>
-            </li>
+            </li> */}
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
@@ -96,10 +98,10 @@ const Dashboard = () => {
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
-                  // to="/allartifact"
+                  to="/allartifact"
                   className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
                 >
-                  <CgProfile />
+                  <GiGlowingArtifact />
                   All Artifact
                 </NavLink>
               </Button>
@@ -108,10 +110,10 @@ const Dashboard = () => {
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
-                  // to="/allartifact"
+                  to="/gallary"
                   className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
                 >
-                  <CgProfile />
+                  <RiGalleryLine />
                   Gallery
                 </NavLink>
               </Button>
@@ -119,15 +121,15 @@ const Dashboard = () => {
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
-                  // to="/allartifact"
+                  to="/blogs"
                   className="  !text-xl lowercase flex items-center gap-3 !w-full !font-semibold  "
                 >
-                  <CgProfile />
+                  <RiBloggerLine />
                   Blog
                 </NavLink>
               </Button>
             </li>
-            <li className="pb-2">
+            {/* <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
                   // to="/allartifact"
@@ -137,7 +139,7 @@ const Dashboard = () => {
                   News
                 </NavLink>
               </Button>
-            </li>
+            </li> */}
             <li className="pb-2">
               <Button className="!w-full !text-black">
                 <NavLink
