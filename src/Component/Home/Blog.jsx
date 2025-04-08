@@ -13,7 +13,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/blog");
+        const res = await axios.get("https://assignement11.vercel.app/blog");
         setBlog(res.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
